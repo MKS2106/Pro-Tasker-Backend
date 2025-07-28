@@ -19,6 +19,13 @@ const taskSchema = new Schema({
     },
     default: 'to-do'
   },
+    createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  deadLine: {
+    type: Date,
+  },
   project: {
   type: Schema.Types.ObjectId,
   ref: 'Project',

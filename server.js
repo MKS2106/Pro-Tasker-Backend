@@ -4,6 +4,7 @@ import cors from "cors"
 import db from "./config/connection.js";
 import usersRouter from './routes/userRoutes.js'
 import projectsRouter from './routes/projectRoutes.js'
+import tasksRouter from './routes/taskRoutes.js'
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use("/api/users", usersRouter)
 app.use('/api/projects', projectsRouter)
+app.use('/api/tasks', tasksRouter)
 
 app.get('/', (req,res) => {
   res.send("Welcome to Pro-Tasker App!!!")

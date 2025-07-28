@@ -10,11 +10,19 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
+   createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+   deadLine: {
+    type: Date,
+  },
   user: {
   type: Schema.Types.ObjectId,
   ref: 'User',
   required: true,
 },
+
  task: [{
   type: Schema.Types.ObjectId,
   ref: 'Task',

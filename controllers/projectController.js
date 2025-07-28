@@ -1,7 +1,7 @@
 import Project from '../models/Project.js'
 import Task from '../models/Task.js'
 
-export const projectCreate = async (req, res) => {
+export const createProject = async (req, res) => {
     try {
         const newProject = await Project.create({...req.body, user: req.user._id})
         const populatedProject = await newProject.populate("user","username",)
