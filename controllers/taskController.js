@@ -1,6 +1,8 @@
 import Task from '../models/Task.js'
 import Project from '../models/Project.js'
 
+
+// create tasks for the project (project id in the parameter) api route /api/tasks/projectId
 export const createTasks = async (req, res) => {
 try {
         const project = await Project.findById(req.params.id)
@@ -26,6 +28,8 @@ try {
     }
 }
 
+
+//Lists/gets task for the project (project id in the prameter) /api/tasks/projectId
 export const getTasks = async (req, res) => {
     try {
 
@@ -48,6 +52,7 @@ export const getTasks = async (req, res) => {
 
 }
 
+//Update the task based on the task id mentioned in the parameter /api/tasks/taskID
 export const updateTask = async (req, res) => {
      try {
 
@@ -74,6 +79,7 @@ export const updateTask = async (req, res) => {
 
 }
 
+//Delete the task based on the task id mentioned in the parameter /api/tasks/taskID
 export const deleteTask = async (req, res) => {
     try {
 
