@@ -35,7 +35,7 @@ export const projectById = async (req, res) => {
         if(project.user.toString() !== req.user._id.toString()){
             return res.status(403).json("User is not authorised to access the project information")
         }
-        const populatedProject = await Project.findById(req.params.id).populate("task","title").populate("user", "username")
+        const populatedProject = await Project.findById(req.params.id).populate("task","title description status",).populate("user", "username")
         res.status(201).json(populatedProject)
 
     } catch (error) {
