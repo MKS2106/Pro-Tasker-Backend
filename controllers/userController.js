@@ -12,6 +12,13 @@ export const userRegistration = async (req, res) => {
     if(error.code === 11000 && error.keyPattern?.email){
     return res.status(400).json({message: 'Email id Exists!'});
     }
+    if(error.name === "ValidationError")
+    {
+      //  return res.status(400).json({message: error.message})
+      const messages = Object.values(error.errors).map(e => e.message);
+      console.log(messages[0])
+      return res.status(400).json({ errors: messages[0] });
+    }
     return res.status(400).json({message: error.message || 'Registration failed!'});
   }
 }

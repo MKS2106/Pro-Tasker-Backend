@@ -16,7 +16,7 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    minlength: 5,
+    minlength: [5,"Password is too short, min length is 5"],
     //  required: true,
     required: true,
   },
