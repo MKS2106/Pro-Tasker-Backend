@@ -6,7 +6,7 @@ import User from "../models/User.js";
 
 const router = express.Router();
 
-//Route to get all user - Will be removing it 
+//Route to get all user- Accesible only for admin user
 router.get('/allusers', authMiddleware, adminOnly, async  (req,res) => {
     const role = req.user.role
     console.log(role)
@@ -14,13 +14,8 @@ router.get('/allusers', authMiddleware, adminOnly, async  (req,res) => {
     res.json(users)
 })
 
-//Required routes
-
+//Required routes to create user and login user
 router.post('/register', userRegistration)
 router.post('/login', userLogin);
-
-// ====ToDo=== 
-// router.post('/logout', userLogout);
-
 
 export default router

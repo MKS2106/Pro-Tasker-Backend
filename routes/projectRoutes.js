@@ -5,23 +5,21 @@ import adminOnly from "../utils/adminOnly.js";
 import Project from "../models/Project.js";
 import User from "../models/User.js";
 
+// Create a new router instance
 const router = express.Router();
-
+// Apply authentication middleware to all routes in this router
 router.use(authMiddleware);
 
-
-//Admin only route 
-
+//Admin only route to get all the projects of all users 
 router.get('/adminprojects', authMiddleware, adminOnly, async  (req,res) => {
-    const role = req.user.role
-    console.log(role)
+    const role = req.user.role;
+    console.log(role); // for debugging 
     const projects = await Project.find().select({_id:1, name: 1}).populate("user", "username");
     res.json(projects)
 })
 
-
+// routes to perform CRUD operations
 router.post('/', createProject)
-// router.post('/', adminOnly, projectCreate) // check before implementing
 router.get('/', allProjects)
 router.get('/:id', projectById)
 router.put('/:id', updateProject)
