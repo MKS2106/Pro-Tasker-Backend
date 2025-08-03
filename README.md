@@ -101,7 +101,7 @@ npm run dev
 4. DELETE
 `api/tasks/:tasktid`
 
-🧠 Development Process:
+## 🧠 Development Process:
 
 - Setup Express.js with modular route/controller pattern
 - Connect MongoDB Atlas and define User, Project, and Task schemas
@@ -109,11 +109,11 @@ npm run dev
 - Protect all routes using custom auth middleware
 - Test all routes via Postman
 
-📌 Future Enhancements:
+## 📌 Future Enhancements:
 
-🧑‍🤝‍🧑 Collaborative projects with team invites
-🗓 Task deadlines, priority levels, and reminders
-📎 File attachment support per task
-🔍 Search, filters, and pagination for large datasets
-🐛 Bug/issue tracking per project
-📊 Admin dashboard for usage analytics and moderation
+- 🧑‍🤝‍🧑 Collaborative projects with team invites
+- 🗓 Task deadlines, priority levels, and reminders
+- 📎 File attachment support per task
+- 🔍 Search, filters, and pagination for large datasets
+- 🐛 Bug/issue tracking per project
+- 📊 Admin dashboard for usage analytics and moderation
