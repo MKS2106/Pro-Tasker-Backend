@@ -1,4 +1,4 @@
-# 🧠 Protasker API – Backend Service for ProjectGuru-App
+# Protasker API – Backend Service for ProjectGuru-App
 This backend project provides a simple and secure user authentication system using **Node.js**, **Express**, **MongoDB**, **bcrypt**, and **JWT**. It allows users to register and log in to the app and manage projects and tasks.
 
 ---
@@ -21,15 +21,16 @@ Built using **Node.js**, **Express**, **MongoDB**, and **JWT**, this RESTful API
 ---
 
 ## 📁 Project Preview:
-
-protasker-api/
+<pre?>
+protasker/backend
+├── config/ # db connection
 ├── controllers/ # Business logic
 ├── middleware/ # Auth 
 ├── models/ # Mongoose schemas
 ├── routes/ # API route handlers
 ├── utils/ # Token and helper functions
 ├── server.js # Entry point
-└── .env # Environment config
+└── .env # Environment config </pre>
 
 ## ⚙️ Technologies Used:
 
