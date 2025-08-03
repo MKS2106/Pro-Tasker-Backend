@@ -21,7 +21,7 @@ Built using **Node.js**, **Express**, **MongoDB**, and **JWT**, this RESTful API
 ---
 
 ## 📁 Project Preview:
-<pre?>
+<pre>
 protasker/backend
 ├── config/ # db connection
 ├── controllers/ # Business logic
