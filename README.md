@@ -88,7 +88,7 @@ npm run dev
 4. DELETE
 `api/projects/:projectid`
 5. GET
-`api/projects/:projected
+`api/projects/:projectid`
 
 ## API end points for Tasks:
 
